@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Reader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="container">
+        <input type="file" id="file-input" accept=".pdf,.txt" hidden>
+        <div id="file-icon">
+            <div class="icon-top"></div>
+            <div class="icon-bottom"></div>
+            <div class="icon-hole"></div>
+        </div>
+        <div id="focus-point">
+            Import file
+            <div id="circle"></div>
+        </div>
+        <div class="controls">
+        <div class="btns">
+            <button id="forward-btn"> < </button>
+            <button id="play-pause-btn">▶</button>
+            <button id="rollback-btn"> > </button>
+        </div>  
+        <input type="range" id="speed-slider" min="100" max="700" value="400" step="10">
+        </div>
+        <p class="WPM">WPM</p>
+        <div id="slider-speed">150</div>
+    </div>
+    <div id="pages">0/0</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
